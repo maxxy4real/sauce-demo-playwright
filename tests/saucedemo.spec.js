@@ -2,6 +2,7 @@
 import { expect } from '@playwright/test';
 import { test } from '../fixtures/baseTest';
 
+//This is my first test
 test('@sanity standard user should login and navigate to product page', async ({ page, loginPage, productsPage }) => {
     await loginPage.login('standard_user', 'secret_sauce');
     await expect(page).toHaveURL(/inventory.html/);
