@@ -9,13 +9,13 @@ test('@sanity standard user should login and navigate to product page', async ({
     await expect(productsPage.title).toHaveText('Products');
 });
 
-test('@regression locked out user should see locked out error', async ({ page, loginPage }) => {
+test('@sanity locked out user should see locked out error', async ({ page, loginPage }) => {
     await loginPage.login('locked_out_user', 'secret_sauce');
     await expect(loginPage.errorMessage).toContainText('Epic sadface: Sorry, this user has been locked out.');
     await expect(page).not.toHaveURL(/inventory.html/);
 });
 
-test('@regression standard user should add item to cart', async ({ loginPage, productsPage }) => {
+test('@sanity standard user should add item to cart', async ({ loginPage, productsPage }) => {
     await loginPage.login('standard_user', 'secret_sauce');
     await productsPage.addBackpackToCart();
     await expect(productsPage.cartBadge).toHaveText('1');
