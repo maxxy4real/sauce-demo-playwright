@@ -5,7 +5,11 @@
   "scripts": {
     "test": " npx playwright test",
     "test:regression": "npx playwright test --grep @regression",
-    "test:sanity": "npx playwright test --grep @sanity"
+    "test:sanity": "npx playwright test --grep @sanity",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",

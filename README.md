@@ -18,7 +18,7 @@ This project is a UI Test Automation Framework built using:
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:maxxy4real/sauce-demo-playwright.git
 ```
 
 Navigate to project directory:
