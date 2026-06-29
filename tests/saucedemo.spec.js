@@ -15,7 +15,7 @@ test('@sanity locked out user should see locked out error', async ({ page, login
     await expect(page).not.toHaveURL(/inventory.html/);
 });
 
-test('@sanity standard user should add item to cart', async ({ loginPage, productsPage }) => {
+test('@regression standard user should add item to cart', async ({ loginPage, productsPage }) => {
     await loginPage.login('standard_user', 'secret_sauce');
     await productsPage.addBackpackToCart();
     await expect(productsPage.cartBadge).toHaveText('1');
