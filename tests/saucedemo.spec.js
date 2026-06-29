@@ -30,6 +30,7 @@ test('@regression standard user should remove item from cart', async ({ loginPag
     await expect(productsPage.backpackAddButton).toBeVisible();
 });
 
+//This is a checkout journey
 test('@sanity standard user should complete checkout successfully', async ({loginPage, productsPage, cartPage, checkoutPage}) => {
     await loginPage.login('standard_user', 'secret_sauce');
     await productsPage.addBackpackToCart();
